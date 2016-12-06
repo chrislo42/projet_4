@@ -12,11 +12,11 @@ td{
 //
 //	PHP d'essai des différentes classes
 //
-require('Fichier.php');
-require('Donnees.php');
-require('Graphique.php');
-require('Date.php');
-require('Tableau.php');
+require('Fichier.class.php');
+require('Donnees.class.php');
+require('Graphique.class.php');
+require('Date.class.php');
+require('Tableau.class.php');
 
 $date1 = new Date("29-11-2016_09:46.46");
 echo("conversion : ".$date1->convert()." ----- ");

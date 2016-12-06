@@ -101,10 +101,10 @@ class Graphique {
 			$cut = strpos ( $data_abs [$index], "_" );					// séparation entre date et heure
 			$date = substr ( $data_abs [$index], 0, $cut );				// tri de la date
 			$heure = substr ( $data_abs [$index], $cut + 1, 5 );		// tri de l'heure
+			if ($date_prev != $date) {								// affichage de la date si elle change
+				ImageString ( $im, 2, $curx, $hauteur - 15, $date, $noir ); // affichage de la date à l'horizontal
+			}
 			if ($curx - $posx > 15) {									// si position trop rapprochée, pas d'affichage
-				if ($date_prev != $date) {								// affichage de la date si elle change
-					ImageString ( $im, 2, $curx, $hauteur - 15, $date, $noir ); // affichage de la date à l'horizontal
-				}
 				imagettftext ( $im, 8, 0, $curx, $cury - 10, $noir, "fonts/verdana.ttf", $data_ord [$index] ); // affichage de la valeur du point
 				ImageStringup ( $im, 2, $curx, $hauteur - 20, $heure, $noir ); // affichage de l'heure en verticale sans les secondes
 				$posx = $curx;											// position du dernier affichage

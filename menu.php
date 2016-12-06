@@ -16,7 +16,7 @@
 	$entire = new Donnees ( $mesdatas );
 	
 	if (!isset($_SESSION['nombre'])) { $_SESSION['nombre'] = $entire->total_lignes(); }
-	if (isset( $_GET ['nombre'] )) { $_SESSION['nombre'] = $_GET ['nombre']; }
+	if (isset( $_GET ['nombre']) && $_GET['nombre']!="") { $_SESSION['nombre'] = $_GET ['nombre']; }
 	
 	$troncate = $entire->last ( $_SESSION['nombre'] );
 	$mesdonnees = new Donnees ( $troncate );
@@ -30,10 +30,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Thingspeak by DTA - Dashboard</title>
-		<link rel="stylesheet" href="style1.css">
-		<!-- <link rel="stylesheet" href="<?php echo $_SESSION['list'];?>"> 
-		<?php echo '<link rel="stylesheet" href="'.$_SESSION['list'].'">';?> -->
+		<title>Thingspeak by DTA</title>
+		<link rel="stylesheet" href="<?php echo $_SESSION['list'];?>"> 
 	</head>
 	<body>
 		<div class="header">
@@ -41,13 +39,13 @@
 				<img src="lib/DTA-small.png" alt="Logo DTA small" />
 				<h2><a href="#">Thingspeak by DTA - <?php echo ($choix);?></a></h2>
 			</div>
-			<div class="form">
+			<div class="form"> 
 				<form method="get" action="menu.php" name="mon formulaire">
-					<!-- <select name="list">
-         			   <option value="style1.css">style #1</option>
-          			   <option value="style2.css">style #2</option>
-        			</select> -->
-					<input name="nombre" type="text" id="nombre" placeholder="nombre de lignes" required/>
+					<select name="list">
+         			   <option value="style1.css" <?php if ($_SESSION['list']=="style1.css"){ echo "selected";}?>>style snow</option>
+          			   <option value="style2.css" <?php if ($_SESSION['list']=="style2.css"){ echo "selected";}?>>style sun</option>
+        			</select>
+					<input name="nombre" type="text" id="nombre" placeholder="nombre d'entrées" value="<?php echo $_SESSION['nombre'];?>"/>
 					<input type="submit" value="Appliquer" />
 				</form>
 			</div>

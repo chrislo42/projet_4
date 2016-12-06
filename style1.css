@@ -97,6 +97,7 @@ body{
 }
 
 .data{
+	overflow: scroll;
   text-align: right;
   padding: 0 20px;
   display: flex;
