@@ -1,20 +1,5 @@
-<?php 
-	$mesdatas = "Date,Temperature\n".
-		"2008-05-06,75\n".
-  		"2008-05-07,72\n".
-  		"2008-05-08,70\n".
-  		"2008-05-09,80\n";
-	echo ($mesdatas);
-?>
 <script>
-  var chaine = '<?php echo ($mesdatas);?>';
-  var chaine = "Date,Temperature\n" +
-  "2008-05-06,75\n" +
-  "2008-05-07,72\n" +  
-  "2008-05-08,70\n" +
-  "2008-05-09,80\n";
-  new Dygraph(dygraph, 
-		  chaine,
+   new Dygraph(dygraph, "data_dy.csv",
 		  {
     title: 'Température et Humidité',
     labelsDiv: document.getElementById('legend'),

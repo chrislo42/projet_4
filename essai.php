@@ -33,6 +33,20 @@ echo ("<br />");
 
 $mesdonnees = new Donnees($mesdatas);
 
+// conversion du fichier csv pour le graphique dygraph
+$data_dyg = "";
+foreach ($mesdonnees->getValeurs() as $value) { // chaque ligne
+$list = explode(";",$value);					// en tableau
+$date_o = new Date($list[0]);					// objet date
+$date_n = $date_o->trans();						// transformation du format
+$newdata = $date_n.",".$list[1].",".substr($list[2],0,2); // réassemblage de la ligne en excluant le retour à la ligne
+$data_dyg .= $newdata.";";						// construction de la chaine avec des ; à la place du /n
+}
+echo (" donnees converties : <br />".$data_dyg."<br />");
+echo ("<br />");
+
+
+
 echo ("nombre d'enregistrement : ".$mesdonnees->total_lignes()."<br />");
 echo ("<br />");
 

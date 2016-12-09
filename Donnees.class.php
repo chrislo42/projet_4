@@ -24,7 +24,7 @@ class Donnees{
       return count($this->_valeurs);
   }
 
-  function tri($col){
+  function tri($col){						// renvoie la colonne température ou humidité
       if (is_int($col) && $col >= 0 && $col <3){
         $colonnes = array();
         foreach ($this->_valeurs as $value) {
@@ -44,7 +44,7 @@ class Donnees{
       $total += $value;
     }
     $moy = $total / $this->total_lignes();
-    $moy = round($moy,1);
+    $moy = round($moy,1);					// une seule décimale
     return $moy;
   }
 
@@ -67,7 +67,7 @@ class Donnees{
   }
 
   function last($numb){
-    return array_slice($this->_valeurs,"-".$numb);
+    return array_slice($this->_valeurs,"-".$numb); // prends les $numb dernieres valeurs
   }
 
 }
