@@ -47,7 +47,7 @@
           				   <option value="style2.css" <?php if ($_SESSION['list']=="style2.css"){ echo "selected";}?>>style sun</option>
         				</select>
 						<input name="nombre" type="text" id="nombre" placeholder="nombre d'entrées" value="<?php echo $_SESSION['nombre'];?>"/>
-						<input type="submit" value="Appliquer" />
+						<input type="submit" value="Appliquer" id="boutonmenu"/>
 					</form>
 				</div>
 				<div class="menu">
@@ -55,7 +55,7 @@
 					<div class="sousmenu">
 						<a href="menu.php?page=dashboard.php">Dashboard</a>
 						<a href="menu.php?page=graphiques.php">Graphiques</a>
-						<a href="menu.php?page=dygraph.php">Dygraphs</a>
+						<a href="menu.php?page=dygraphs.php">Dygraphs</a>
 						<a href="menu.php?page=infos.php">Informations</a>
 					</div>
 				</div>

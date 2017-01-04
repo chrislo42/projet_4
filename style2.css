@@ -142,6 +142,16 @@ p{
   font-style: italic;
 }
 
+.content{
+  font-style: normal;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+li{
+  list-style: none;
+}
+
 /*BOF dashboard.php*/
 .temp-v{
   height: 282px;
@@ -226,6 +236,16 @@ p{
 /*BOF infos.php*/
 .infos{
   text-align: center;
+}
+
+#nombre{
+  border: none;
+  height: 25px;
+  padding-left: 5px;
+}
+
+select:hover{
+  cursor: pointer;
 }
 /*EOF infos.php*/
 
