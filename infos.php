@@ -28,7 +28,7 @@
 
         <h4>Améliorations</h4>
         <p class="content">
-          Conscients que ce travail n'est pas parfait, il y aurait beaucoup de modifications à apporter à ce projet : une refonte de l'interface graphique avec un framework type <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>, une meilleure structuration de projet (MVC), une bibliothèque d'image/graphiques autre que GD, des graphiques plus dynamiques et attrayants grâce à <a href="http://www.chartjs.org/" target="_blank">Chartjs</a> par exemple, une meilleure compatibilité entre les navigateurs, etc...
+          Conscients que ce travail n'est pas parfait, il y aurait beaucoup de modifications à apporter à ce projet : une refonte de l'interface graphique avec un framework type <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>, une bibliothèque d'image/graphiques autre que GD, des graphiques plus dynamiques et attrayants grâce à <a href="http://www.chartjs.org/" target="_blank">Chartjs</a> par exemple, une meilleure compatibilité entre les navigateurs, une structuration du projet suivant l'architecture MVC, etc...
         </p>
 
       </div>

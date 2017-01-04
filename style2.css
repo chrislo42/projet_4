@@ -236,6 +236,8 @@ li{
 /*BOF infos.php*/
 .infos{
   text-align: center;
+  height: 563px;
+  overflow: scroll;
 }
 
 #nombre{
