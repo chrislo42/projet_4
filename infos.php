@@ -19,12 +19,12 @@
 
         <h4>Répartition des tâches</h4>
         <p class="content">
-          <ul>
-            <li>PHP : Christian et Yacine</li>
-            <li>User Interface : Julien</li>
-            <li>Scénario, production, réalisation et montage du tutoriel POO : Thomas</li>
-          </ul>
+          PHP : Christian et Yacine<br>
+          User Interface : Julien<br>
+          Scénario, production, réalisation et montage du tutoriel POO : Thomas  
         </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BtfQwlfl-rk" frameborder="0" allowfullscreen></iframe>
+
 
         <h4>Améliorations</h4>
         <p class="content">
