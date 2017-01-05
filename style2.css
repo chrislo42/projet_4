@@ -1,7 +1,8 @@
 body{
   margin: auto;
   font-family: Helvetica;
-  background: url('lib/plage.jpeg') center;
+  background: url('lib/plage.jpeg');
+  background-position: 50% 20%;
 }
 
 #background_opacity {
